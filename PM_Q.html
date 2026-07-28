@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.18/dist/katex.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((getMarkmap) => {
+          window.WebFontConfig = {
+            custom: {
+              families: [
+                "KaTeX_AMS",
+                "KaTeX_Caligraphic:n4,n7",
+                "KaTeX_Fraktur:n4,n7",
+                "KaTeX_Main:n4,n7,i4,i7",
+                "KaTeX_Math:i4,i7",
+                "KaTeX_Script",
+                "KaTeX_SansSerif:n4,n7,i4",
+                "KaTeX_Size1",
+                "KaTeX_Size2",
+                "KaTeX_Size3",
+                "KaTeX_Size4",
+                "KaTeX_Typewriter"
+              ]
+            },
+            active: () => {
+              getMarkmap().refreshHook.call();
+            }
+          };
+        })(() => window.markmap)</script><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" defer></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"&#x751f;&#x7522;&#x7ba1;&#x7406;&#x984c;&#x76ee;&#x7e3d;&#x6574;&#x7406;","children":[{"content":"&#x7b2c;&#x4e00;&#x7ae0; &#x751f;&#x7522;&#x7ba1;&#x7406;&#x6982;&#x8ad6;","children":[{"content":"&#x751f;&#x7522;","children":[{"content":"&#x88fd;&#x9020;&#x696d; vs &#x670d;&#x52d9;&#x696d;","children":[{"content":"&#x5169;&#x8005;&#x7686;&#x662f;&#x8207;&#x751f;&#x7522;&#x76f8;&#x95dc;&#x7684;&#x7522;&#x696d;&#x3002;&#x88fd;&#x9020;&#x696d;&#x7684;&#x7522;&#x51fa;&#x662f;&#x6709;&#x5f62;&#x8cc7;&#x7522;&#xff0c;&#x800c;&#x670d;&#x52d9;&#x696d;&#x7684;&#x7522;&#x51fa;&#x662f;&#x7121;&#x5f62;&#x670d;&#x52d9;&#x3002;","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"li","lines":"10,12"}}],"payload":{"tag":"li","lines":"9,12"}},{"content":"&#x751f;&#x7522;&#x7ba1;&#x7406;&#x53ca;&#x6f14;&#x9032;","children":[{"content":"&#x5de5;&#x696d;1.0~3.0","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"&#x5de5;&#x696d;4.0","children":[{"content":"&#x6b32;&#x9054;&#x6210;&#x5de5;&#x696d;4.0&#x5fc5;&#x9808;&#x7531;&#x5de5;&#x696d;3.0&#xff0c;&#x5148;&#x6f14;&#x9032;&#x5230;&#x5de5;&#x696d;3.5&#xff0c;&#x518d;&#x5230;&#x5de5;&#x696d;4.0&#x3002;","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"&#x5de5;&#x696d;3.5&#x6709;&#x4ee5;&#x4e0b;&#x7279;&#x9ede;&#xff1a;&#xff08;&#x756b;&#x5716;&#xff09;&#x667a;&#x6167;&#x751f;&#x7522;&#x3001;&#x667a;&#x6167;&#x5de5;&#x5ee0;&#x3001;&#x667a;&#x6167;&#x4f9b;&#x61c9;&#x93c8;&#x3001;&#x6578;&#x4f4d;&#x6c7a;&#x7b56;&#x3001;&#x5168;&#x9762;&#x8cc7;&#x6e90;&#x7ba1;&#x7406;(ERP)","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"&#x5176;&#x689d;&#x4ef6;&#x6709;&#x56db;&#xff1a;","children":[{"content":"&#x4fbf;&#x5b9c;&#x7684;<strong>&#x611f;&#x6e2c;&#x5143;&#x4ef6;</strong>&#x3001;&#x5feb;&#x901f;&#x4fbf;&#x5b9c;&#x7a69;&#x5b9a;&#x7684;<strong>&#x983b;&#x5bec;</strong>&#x3001;&#x5927;&#x91cf;&#x4fbf;&#x5b9c;&#x7684;<strong>&#x5009;&#x5132;</strong>&#x3001;<strong>&#x6578;&#x64da;&#x5206;&#x6790;&#x4eba;&#x624d;</strong>&#x3002;","children":[],"payload":{"tag":"li","lines":"18,19"}}],"payload":{"tag":"li","lines":"17,19"}}],"payload":{"tag":"li","lines":"14,19"}},{"content":"BI vs BA","children":[{"content":"BI: &#x63cf;&#x8ff0;&#x6027;&#x3001;&#x8a3a;&#x65b7;&#x6027;&#x3001;&#x9810;&#x6e2c;&#x6027; &#x2794; &#x76f8;&#x95dc;&#x6027;","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"BA: &#x898f;&#x7bc4;&#x6027; &#x2794; &#x56e0;&#x679c;&#x6027;","children":[],"payload":{"tag":"li","lines":"21,22"}}],"payload":{"tag":"li","lines":"19,22"}}],"payload":{"tag":"li","lines":"12,22"}},{"content":"&#x751f;&#x7ba1;&#x7cfb;&#x7d71;","children":[{"content":"VATI&#x7522;&#x696d;&#x93c8;","children":[{"content":"&#x4e0d;&#x540c;&#x7522;&#x696d;&#x6703;&#x6709;&#x4e0d;&#x540c;&#x7684;&#x751f;&#x7522;&#x7cfb;&#x7d71;&#xff0c;&#x5206;&#x70ba;VATI&#x578b;&#xff0c;&#x7528;&#x65bc;&#x4e86;&#x89e3;&#x751f;&#x7522;&#x7684;&#x63a7;&#x5236;&#x91cd;&#x9ede;&#x3002;","children":[],"payload":{"tag":"li","lines":"24,25"}}],"payload":{"tag":"li","lines":"23,25"}},{"content":"SCM&#x4f9b;&#x61c9;&#x93c8;&#x3001;&#x751f;&#x7522;&#x6d41;&#x7a0b;&#x5167;&#x6db5;","children":[{"content":"Supplier &#x2794; IPO &#x2794; DC &#x2794; Retailer &#x2794; Customer","children":[],"payload":{"tag":"li","lines":"26,27"}},{"content":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mo stretchy=\"false\">&#x230a;</mo><mtext>P&#xa0;I&#xa0;C&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;D&#xa0;&amp;&#xa0;L&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;</mtext><mo stretchy=\"false\">&#x230b;</mo></mrow><annotation encoding=\"application/x-tex\">\\lfloor \\text{P I C - - - - - - - D \\&amp; L - - - - - - - - - - - - } \\rfloor</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1em;vertical-align:-0.25em;\"></span><span class=\"mopen\">&#x230a;</span><span class=\"mord text\"><span class=\"mord\">P&#xa0;I&#xa0;C&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;D&#xa0;&amp;&#xa0;L&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;-&#xa0;</span></span><span class=\"mclose\">&#x230b;</span></span></span></span>","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"Production Planning &amp; Inventory Control","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"Distribution &amp; Logistic","children":[{"content":"Logistics &#x904b;&#x7c4c;&#xff1a;&#x7269;&#x6599;&#x3001;&#x91d1;&#x9322;&#x3001;&#x8cc7;&#x8a0a;&#x3001;&#x5546;&#x52d9;&#x4e4b;&#x79fb;&#x52d5;","children":[],"payload":{"tag":"li","lines":"30,31"}}],"payload":{"tag":"li","lines":"29,31"}},{"content":"&#x4f7f;&#x7269;&#x6599;&#x6d41;&#x7a0b;&#x5728;&#x8cc7;&#x8a0a;&#x8edf;&#x9ad4;&#x7684;&#x5354;&#x4f5c;&#x4e0b;&#x66f4;&#x6709;&#x6548;&#x7387;","children":[],"payload":{"tag":"li","lines":"31,32"}}],"payload":{"tag":"li","lines":"25,32"}}],"payload":{"tag":"li","lines":"22,32"}},{"content":"&#x8f49;&#x63db;&#x904e;&#x7a0b;","children":[{"content":"&#x7522;&#x54c1;&#x5b9a;&#x4f4d;","children":[{"content":"&#x4f9d;&#x7167;<strong>&#x7522;&#x54c1;&#x7a2e;&#x985e;</strong>&#x53ca;<strong>&#x524d;&#x7f6e;&#x671f;</strong>&#x5206;&#x985e;","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"BTS/MTS&#x3001;BTO/MTO&#x3001;ATO/CTO&#x3001;ETO","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"<strong>&#x5b58;&#x8ca8;</strong>&#x751f;&#x7522;&#x3001;&#x8a02;&#x8ca8;&#x751f;&#x7522;&#x3001;&#x8a02;&#x8ca8;&#x88dd;&#x914d;/&#x914d;&#x7f6e;&#x751f;&#x7522;&#x3001;&#x8a02;&#x8ca8;&#x8a2d;&#x8a08;&#x751f;&#x7522;","children":[],"payload":{"tag":"li","lines":"36,37"}}],"payload":{"tag":"li","lines":"33,37"}},{"content":"&#x88fd;&#x7a0b;&#x5b9a;&#x4f4d;","children":[{"content":"&#x4f9d;&#x7167;<strong>&#x7522;&#x54c1;&#x7a2e;&#x985e;</strong>&#x3001;<strong>&#x6578;&#x91cf;</strong>&#x53ca;<strong>&#x751f;&#x7522;&#x65b9;&#x5f0f;</strong>&#x5206;&#x985e;","children":[],"payload":{"tag":"li","lines":"38,39"}},{"content":"Y &#x8ef8;&#xff1a;&#x6578;&#x91cf;&#x3001;&#x901f;&#x5ea6;&#x3001;&#x5c08;&#x7528;&#x3001;&#x6295;&#x8cc7;","children":[{"content":"&#x6d41;&#x7a0b; flow","children":[],"payload":{"tag":"li","lines":"40,41"}},{"content":"&#x5927;&#x91cf; flow lines","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"&#x91cd;&#x8907; repetitive","children":[],"payload":{"tag":"li","lines":"42,43"}},{"content":"&#x6279;&#x91cf; / &#x63db;&#x7dda; transfer line","children":[],"payload":{"tag":"li","lines":"43,44"}}],"payload":{"tag":"li","lines":"39,44"}},{"content":"&#x6df7;&#x7dda; Mixed","children":[{"content":"&#x5f48;&#x6027; FMS","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"&#x7d30;&#x80de; / &#x7d44;&#x7e54; cell group","children":[],"payload":{"tag":"li","lines":"46,47"}}],"payload":{"tag":"li","lines":"44,47"}},{"content":"&#x96f6;&#x5de5; job shop","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"&#x5c08;&#x6848; project","children":[],"payload":{"tag":"li","lines":"48,49"}}],"payload":{"tag":"li","lines":"37,49"}}],"payload":{"tag":"li","lines":"32,49"}},{"content":"&#x751f;&#x7522;&#x7ba1;&#x7406;&#x7bc4;&#x7587;","children":[{"content":"APP vs MS","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"RCCP vs CRP","children":[],"payload":{"tag":"li","lines":"51,52"}},{"content":"PAC ?","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"&#x751f;&#x7522;&#x7ba1;&#x7406;&#x7684;&#x79e9;&#x5e8f;","children":[],"payload":{"tag":"li","lines":"53,54"}}],"payload":{"tag":"li","lines":"49,54"}},{"content":"&#x6d41;&#x7a0b;&#x5716; p.1-43","children":[{"content":"HEAD","children":[{"content":"&#x4f01;&#x696d;&#x4f7f;&#x547d;","children":[{"content":"&#x76ee;&#x6a19;","children":[{"content":"&#x884c;&#x92b7;&#x8a08;&#x5283;","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"&#x92b7;&#x552e;&#x9810;&#x6e2c;","children":[],"payload":{"tag":"li","lines":"59,60"}}],"payload":{"tag":"li","lines":"57,60"}}],"payload":{"tag":"li","lines":"56,60"}}],"payload":{"tag":"li","lines":"55,60"}},{"content":"&#x751f;&#x7522;&#x7a0b;&#x5e8f;&#x8a2d;&#x8a08;","children":[{"content":"&#x7522;&#x54c1;&#x8a2d;&#x8a08;","children":[{"content":"&#x88fd;&#x7a0b;&#x898f;&#x5283;","children":[],"payload":{"tag":"li","lines":"62,63"}}],"payload":{"tag":"li","lines":"61,63"}}],"payload":{"tag":"li","lines":"60,63"}},{"content":"&#x751f;&#x7522;&#x898f;&#x5283;","children":[{"content":"&#xff32;&#xff32;&#xff30;&#x8cc7;&#x6e90;&#x9700;&#x6c42;&#x898f;&#x5283;","children":[{"content":"&#xff21;&#xff30;&#xff30;&#x96c6;&#x9ad4;&#x898f;&#x5283;","children":[{"content":"&#xff2d;&#xff33;&#x4e3b;&#x6392;&#x7a0b;","children":[{"content":"&#xff2d;&#xff30;&#xff33;&#x716e;&#x751f;&#x7522;&#x6392;&#x7a0b;","children":[{"content":"&#xff32;&#xff23;&#xff23;&#xff30;&#x7c97;&#x7565;&#x7522;&#x80fd;&#x4f30;&#x8a08;","children":[{"content":"&#x7522;&#x80fd;&#x8db3;&#x5920;&#x55ce;&#xff1f; Yes!","children":[{"content":"&#x7269;&#x6599;&#x5206;&#x6790;","children":[{"content":"&#x7269;&#x6599;&#x6e05;&#x55ae;&#xff22;&#xff2f;&#xff2d;","children":[],"payload":{"tag":"li","lines":"71,72"}},{"content":"&#xff29;&#xff33;&#x7269;&#x6599;&#x5eab;&#x5b58;","children":[{"content":"&#xff2d;&#xff32;&#xff30;&#x7269;&#x6599;&#x9700;&#x6c42;&#x8a08;&#x5283;","children":[],"payload":{"tag":"li","lines":"73,74"}}],"payload":{"tag":"li","lines":"72,74"}}],"payload":{"tag":"li","lines":"70,74"}}],"payload":{"tag":"li","lines":"69,74"}}],"payload":{"tag":"li","lines":"68,74"}}],"payload":{"tag":"li","lines":"67,74"}}],"payload":{"tag":"li","lines":"66,74"}}],"payload":{"tag":"li","lines":"65,74"}}],"payload":{"tag":"li","lines":"64,74"}}],"payload":{"tag":"li","lines":"63,74"}},{"content":"&#x751f;&#x7522;&#x6d3b;&#x52d5;&#x63a7;&#x5236;&#xff30;&#xff21;&#xff23;","children":[{"content":"MRP","children":[{"content":"&#xff30;&#xff2f;&#x63a1;&#x8cfc;&#x55ae;","children":[{"content":"&#x9a57;&#x6536;","children":[{"content":"&#x9818;&#x767c;&#x6599;","children":[{"content":"&#x5009;&#x5132;","children":[{"content":"&#x9818;&#x767c;&#x6599;","children":[],"payload":{"tag":"li","lines":"80,81"}},{"content":"&#x76e4;&#x9ede;","children":[],"payload":{"tag":"li","lines":"81,82"}},{"content":"&#x5b58;&#x8ca8;&#x7ba1;&#x5236;","children":[],"payload":{"tag":"li","lines":"82,83"}},{"content":"&#x5446;&#x5ee2;&#x6599;&#x8655;&#x7406;","children":[],"payload":{"tag":"li","lines":"83,84"}},{"content":"&#x5be6;&#x9ad4;&#x914d;&#x92b7;","children":[],"payload":{"tag":"li","lines":"84,85"}}],"payload":{"tag":"li","lines":"79,85"}}],"payload":{"tag":"li","lines":"78,85"}}],"payload":{"tag":"li","lines":"77,85"}}],"payload":{"tag":"li","lines":"76,85"}},{"content":"&#xff37;&#xff2f;&#x88fd;&#x4f5c;&#x55ae;","children":[{"content":"&#xff23;&#xff32;&#xff30;&#x7522;&#x80fd;&#x9700;&#x6c42;&#x898f;&#x5283;","children":[{"content":"&#x7522;&#x80fd;&#x8db3;&#x5920;&#x55ce;&#xff1f; Yes!","children":[{"content":"&#xff33;&#xff26;&#xff23;","children":[],"payload":{"tag":"li","lines":"88,89"}},{"content":"&#x767c;&#x51fa;&#x5de5;&#x4ee4;","children":[{"content":"&#x73fe;&#x5834;&#x4f5c;&#x696d;&#x6392;&#x7a0b;","children":[{"content":"&#xff33;&#xff26;&#xff2d;&#xff23;","children":[],"payload":{"tag":"li","lines":"91,92"}},{"content":"&#x8490;&#x96c6;&#x73fe;&#x5834;&#x8cc7;&#x8a0a;","children":[{"content":"&#x63a7;&#x5236;&#x8207;&#x56de;&#x994b;","children":[{"content":"&#x5b8c;&#x5de5;&#x5de5;&#x4ee4;&#x8655;&#x7406;","children":[],"payload":{"tag":"li","lines":"94,96"}}],"payload":{"tag":"li","lines":"93,96"}}],"payload":{"tag":"li","lines":"92,96"}}],"payload":{"tag":"li","lines":"90,96"}}],"payload":{"tag":"li","lines":"89,96"}}],"payload":{"tag":"li","lines":"87,96"}}],"payload":{"tag":"li","lines":"86,96"}}],"payload":{"tag":"li","lines":"85,96"}}],"payload":{"tag":"li","lines":"75,96"}}],"payload":{"tag":"li","lines":"74,96"}}],"payload":{"tag":"li","lines":"54,96"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"&#x7b2c;&#x4e8c;&#x7ae0;","children":[],"payload":{"tag":"h2","lines":"96,97"}}],"payload":{"tag":"h1","lines":"6,7"}},{"colorFreezeLevel":2})</script>
+</body>
+</html>
