@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生產管理概論</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+    .markmap {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 核心修復 1：消滅重複疊字（關閉 KaTeX 朗讀層殘影） */
+    .katex .katex-mathml {
+      display: none !important;
+    }
+    .katex .visually-hidden {
+      display: none !important;
+    }
+
+    /* 核心修復 2：避免 iOS Safari foreignObject 尺寸算成 0 擠在頂部 */
+    svg foreignObject {
+      overflow: visible !important;
+    }
+    .katex-html {
+      display: inline-block !important;
+      position: static !important;
+      white-space: nowrap !important;
+    }
+  </style>
+
+  <!-- 官方自動渲染引擎 -->
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.4"></script>
+</head>
+<body>
+
+<div class="markmap">
+---
+title: 生產管理概論
+markmap:
+  katex: true
+  colorFreezeLevel: 3
+  color:
+    - "#FF6B6B"
+    - "#4D96FF"
+    - "#c289d9"
+    - "#6BCB77"
+    - "#FFD93D"
+---
+
+# CH１_生產管理概論
+
+## 學習方法
+- S
+  - Structure
+- Q
+  - Question
+- 3R
+  - Read
+  - Recite
+  - Review
+
+## 解題方法
+- 申論題
+  - 破題
+    - 單一名詞
+      - 解釋名詞、目的、做法
+    - 多個名詞
+      - 相同點、相異處
+  - 圖表
+    - 其差異可用下圖/表表示：
+  - 結論
+    - 看圖說故事、換句話說
+    - 由上圖/表可知：
+
+## 生產與作業
+- 生產
+  - 投入 ➔ 轉換 ➔ 產出 ➔ 附加價值
+  - 有形（製造業）
+  - 無形（服務業）
+  - 生產管理
+    - 提升作業效率
+    - 名詞
+      - 管理功能：規劃、組織、用人、領導、控制
+      - 企業功能：生產、行銷、人事、研發、財務
+      - 生產管理 (Production Management, PM) ➔ 製造業
+      - 作業管理 (Operation Management, OM) ➔ 製造＋服務業
+      - 生產作業管理 (Production and Operation Management, POM)
+      - 生產計劃與控制 (Production Planning and Controlling, PPC) ➔ 生產線
+  - 問題：製造業 vs 服務業
+- 生產管理及演進
+  - 同：提升生產效率、品質並解決上一階段的問題
+  - 工業1.0：機械化
+    - 機器取代人力
+  - 工業2.0：電氣化
+    - 大量生產裝配線
+  - 工業3.0：資訊化
+    - FMS：彈性製造系統
+      - CNC加工中心、自動物料搬運設備、電腦控制單元
+      - CNC：Computer Numerical Control, 電腦數值控制
+      - AGV：Automated Guide Vehicle, 無人搬運車
+      - AS/RS：Automated Storage and Retrieval System
+  - 工業3.5：（智慧化）
+    - 智慧生產、智慧工廠、智慧供應鏈、數位決策、全面資源管理 (ERP) p.1-14
+  - 工業4.0：網絡化
+    - IoT: Internet of Things
+    - 虛實整合智慧製造系統
+    - 大量自動化
+      - 機器設備 ➔ 物聯網IoT
+    - 大量客製化
+      - 多樣化生產
+    - 數據決策
+    - 條件：(4)
+      - 便宜感測元件 ➔ 邊緣運算
+      - 快速又便宜的頻寬 ➔ 5G
+      - 便宜又大量的儲存空間 ➔ 記憶體
+      - 數據分析人才 ➔ 機器學習
+    - 簡言之，工業4.0就是大量運用自動化機器人、感測器物聯網、供應鏈互聯網、銷售及生產大數據分析，以人機協作方式提升全製造價值鏈之生產力及品質。
+    - 人工智慧
+      - 預測性維修（信號之保養）
+        - vs 預防維修（定期保養）、矯正維修（壞掉才修）
+      - 供應鏈優化
+      - 自適應生產
+      - 品質控制
+      - 人機協作 
+    - 工業4.1：滿足消費者需求的4.0做法
+  - 工業5.0：永續化
+    - 永續、環境、綠色製造
+  - BI vs BA
+    - 同：透過不同分析協助企業決策的方式
+    - BI: Business Intelligence
+      - 回顧過去與現在
+        - 描述性分析
+        - 行銷4P (Product, Price, Place, Promotion)
+        - 產品模組、財務分析模組、通路模組、顧客模組(資料庫)
+        - 診斷性分析
+        - ETL (萃取 Extract、轉換 Transform、使用 Load)
+        - 資料倉儲
+        - 預測性分析
+        - 績效管理、企業報表、資料挖礦、線上分析處理技術
+        - ＝〉變數相關性
+    - BA: Business Analysis
+      - 前瞻未來
+        - 規範性分析
+        - 深度學習及神經網路
+        - ＝〉變數因果性
+  - 問題：工業1.0~3.0、工業4.0 (需先演進到3.5)、BI/BA
+- 生產系統
+  - 系統特性
+    - 組成性、相互關聯性、目的性、整體性、邊界、動態性、輸入與輸出
+  - 生產子系統：IPO, Input, Process, Output
+  - VATI產業鏈
+    - 不同產業會有不同的生產系統，分爲VATI型，用於聊解生產的控制重點。
+    - V：投入1種，產出多種
+      - 例：鋼鐵業
+    - A：投入多種，產出1種
+      - 例：汽車
+    - T：投入多種，產出多種
+      - 例：手機、消費性電子產品
+    - I：投入1種，產出1種
+      - 例：晶圓
+  - 供應鏈 SC, Supply Chain
+    - PIC: Production Planning and Inventory Controlling, 生產存貨控制
+    - D&L: Distribution and Logistics, 配銷及運籌
+      - L運籌：SC中有關物料、金錢、資訊、商務之移動
+  - 供應鏈管理 SCM：供應商＋IPO＋配銷＋顧客＋PIC＋D&L
+  - 生產流程內涵：讓“物料流程”在資訊流程（軟體如：MRP II, ERP）的幫助下更有效率
+
+- 轉換過程
+  - 產品定位策略
+    - 依照產品種類及前置期分類
+      - LT, Lead Time，訂單送出去到拿到的時間
+      - MPS, Master Production Schedule
+      - FAS, Final Assembly Schedule
+    - MTS：Make to Stock, 存貨生產 =BTS
+      - 上窄下寬ㄉ梯形
+      - 特色：
+        - 產品種類少
+        - LT短
+        - 成品庫存
+        - MPS ≈ FAS
+        - 生管重點：預測要準（訂單來自公司內部、BOM事前準備）
+        - 例子：消費性產品（大量生產）
+    - MTO：Build to Order, 訂貨生產 =BTO
+      - 上寬下窄ㄉ梯形
+      - 特色：
+        - 產品種類多
+        - LT長
+        - 原材料庫存
+        - MPS ≠ FAS
+        - 生管重點：縮短LT
+        - 例子：機器訂單、高級車車
+    - ATO：Assemble to Order
+    CTO：Configuration to Order
+      - 中間縮進來，左右相反ㄉ ∑
+      - 特色：
+        - 產品種類比MTS多
+        - LT比BTO短
+        - 零組件半成品庫存
+        - MPS ≠ FAS
+        - 生管重點：零組件必須滿足顧客需求
+        - 例子：
+          - ATO ➔ IKEA
+          - CTO ➔ 電腦（有一點點彈性）
+    - ETO：Eigneering to Order
+      - 像是BTO, MTO
+  - 製程定位策略
+    - 同：都是轉換過程，以製程定位分類，產品種類及生產數量各不相同。
+    - Y軸：數量、速度、專用、投資
+    - 流程生產 Flow shop production
+      - 連續 Continuous
+        - 例：石油、化工、煉鋼（不能停！）
+      - 大量重複 Repetitive
+        - 例：iPhone 裝配
+      - 批量 Batch / 換線 Transfer line
+        - 例：調味乳
+    - 混線 Mixed-model repetitive flow
+      - 彈性 FMS / 群組生產
+        - 例：零組件加工
+      - 細胞 Cell
+        - 產品式佈置
+        - 例：筆記型電腦客製化組裝線、豐田汽車零部件組裝單元
+    - 零工 Job shop
+      - 製程別佈置、功能式佈置
+      - 例：傳統機械加工廠、醫院
+    - 專案 Project
+- 生產管理範疇
+  - 長期 ➔ 一年以上、中期 ➔ 2~12月、短期 ➔ 2月以內
+  - Ｑ1：APP與MS的異同？
+    - APP及MS都是生產規劃的程序
+      - APP是規劃2~12的中期規劃、所有產品項之中期生產計劃，
+      - 而MS是規劃每月/週，個別產品項之短期生產計劃。
+    - 其差異如下圖說明$\cdots$（RRP-MRP）｜由上圖可知：$\cdots$
+  
+  - Ｑ2：RCCP與CRP的差異？
+    - RCCP及CRP皆是檢討產能是否足夠的程序
+      - RCCP是檢討MS所展開個別產品項的生產計劃(MPS)
+      - 而CRP是檢討MP所展開自製零組件的生產計劃(WO)
+      - 公司產能是否得以應付
+    - 其差異如下圖說明$\cdots$（MS-SFC）｜由上圖可知：$\cdots$
+  
+  - Ｑ3：PAC的內容及架構？
+    - PAC是生產中活動控制的程序，針對MRP所展開的PO及WO，進行排程及控制，以保證準時交貨。
+    - 如下圖說明$\cdots$（MRP-）｜由上圖可知：PAC工作內容如下PAC
+      - PO之排程及控制
+      - WO之排程及控制
+        - 現場作業排程
+        - 現場監控(SFMC)
+
+  - Ｑ4：生產管理流程？
+    - 生產管理，包括生產程序設計、生產規劃、生產活動控制。其目的在保證產能滿足客戶需求、準時交貨。
+    - 生產流程如下圖$\cdots$｜由上圖可知，生產程序設計包括：$\cdots$
+  - --
+  - 高層
+    - 企業使命
+      - 目標
+        - 銷售預測 <- 行銷計劃
+  - 生產程序設計
+    - 產品設計
+      - 製程規劃
+  - 生產規劃與控制 PPC
+  Production Planning and Control
+    - RRP 企業資源規劃（長期）
+    Resource Requirement Planning
+      - APP 集體規劃（中期）
+      Aggergated Planning
+        - MS 主排程
+        Master Scheduling
+          - MPS 主生產排程
+          Master Production Schedule
+            - RCCP
+            Rough Cut Capacity Planning
+              - 產能足夠嗎？Yes!
+                - 物料分析 <- BOM
+                （用BOM表分析）
+                  - IS 物料庫存
+                  Inventory Status Records
+                    - MRP 物料需求計劃（短期）
+                    Material Requied Planning
+  - 生產活動控制 PAC
+  Production Activity Control
+    - PO 採購單
+      - 驗收
+          - 倉儲
+            - 領發料
+            - 盤點
+            - 存量管制
+            - 呆廢料處理
+            - 實體配銷
+    - WO 製造單
+      - CRP
+      Capacity Requirement Planning
+        - 產能足夠嗎？Yes!
+          - SFC, Shop Floor Control
+          - 發出工令
+            - 現場作業排程
+              - SFMC
+              Shop Floor Management & Control
+                - 蒐集現場資料
+                  - 控制與回饋
+                    - 完工工令處理
+
+- 目標及績效衡量
+  - 核心競爭力（競爭優勢、優序）
+    - 成本低、品質高、彈性大（時間、數量）、交期短（快速）、交期準、地點好
+  - 策略(What)、戰術(How)、作業(實行細節化、例行性)
+  - 製造策略評估準則
+    - 訂單評判準則 Order Qualifier Criterion
+      - 基本門檻
+    - 訂單贏取準則 Order Winner Criterion
+      - 核心競爭力
+  - 生產管理績效衡量 PM's KPI
+  Key Performance Indicator 
+    - 生產力 Productivity
+      - $= \frac{\text{產出}}{\text{投入}}$
+        - 投入
+          - 人工
+          - 材料
+          - 製造費用
+    - 效率/效果
+      - Do the thing RIGHT / Do the RIGHT thing
+      - 以正確方式做事／做正確的事
+    - 整體設備效率 (OEE) ＝稼動率Ｘ設備效率Ｘ良品率
+      - $\text{稼動率} = \frac{\text{實際運轉時間}}{\text{計畫生產時間}} = \text{有效時間}$
+      - $\text{設備效率} = \frac{\text{實際生產速度產出}}{\text{理論速度產出}}$
+      - $\text{良率} = \frac{\text{良品數}}{\text{實際產出}}$
+      - $\text{OEE} = \frac{\text{良品數}}{\text{計畫時間} \times \text{理論速度產出}}$
+- 競爭優勢（品質）
+  - 成本低、彈性大、時間縮短、品質 = 顧客的滿意程度
+  - 管制循環 PDCA (Deming)Cycle
+    - Plan-Do-Check-Action
+  - 品管七大手法
+    - 層別法
+    - 散佈圖（相關圖）
+    - 直方圖
+    - 管制圖
+    - 查核表
+    - 魚骨圖（石川圖、特性要因圖）
+    - 柏拉圖（Pareto）（80/20）
+  - 誤差冒險
+    - 型 $I$ 誤差/生產者冒險率/$\alpha$＝P(拒收｜好) ➔ 好的被拒收
+    - 型 $II$ 誤差/消費者冒險率/$\beta$＝P(接受｜壞) ➔ 壞的被允收
+    - 管制界線
+      - 變寬
+        - $\alpha$ 變小、$\beta$ 變大
+      - 變窄
+        - $\alpha$ 變大、$\beta$ 變小
+      - $\alpha$、$\beta$ 變小 ➔ $n$ 變大
+    - OOC：Out Of Control
+      - 意義：超出管制界線、產品可能發生不良
+      - 如何處理：
+        - 若為型Ｉ誤差，不處理 ➔ 若要減少OCC，改系統、設備
+        - 若為Power(檢定力 $1-\beta$) ➔ 一定要處理
+  - 管制圖
+    - 計量值（量測）（常態分配）
+      - $E[\bar{x}] = \mu = \bar{x} ,\sqrt{V[\bar{X}]} = \sqrt{\frac{\sigma^2}{n}} = \frac{\sigma}{\sqrt{n}}$
+      - $\bar{X}$
+        - ➀ $\sigma$已知
+          - $UCL_{\bar{X}} = \mu_{\bar{X}} + 3\sigma_{\bar{X}} = {\bar{X}} + 3\cdot\frac{\sigma}{\sqrt{n}}$
+          - $CL_{\bar{X}} = {\bar{X}}$
+          - $LCL_{\bar{X}} = \mu_{\bar{X}} - 3\sigma_{\bar{X}} = {\bar{X}} - 3\cdot\frac{\sigma}{\sqrt{n}}$
+        - ➁ $\sigma$未知
+          - $(\sigma \text{ 用 } \frac{\bar{R}}{d_2} \text{ 代替})$
+          - $UCL_{\bar{X}} = {\bar{X}} + 3 \cdot \frac{\frac{\bar{R}}{d_2}}{\sqrt{n}} = {\bar{X}} + \frac{3}{\sqrt{n} \cdot d_2} \bar{R} = {\bar{X}} + A_2 \bar{R}$
+          - $LCL_{\bar{X}} = {\bar{X}} - 3 \cdot \frac{\frac{\bar{R}}{d_2}}{\sqrt{n}} = {\bar{X}} - \frac{3}{\sqrt{n} \cdot d_2} \bar{R} = {\bar{X}} - A_2 \bar{R}$
+      - $R$
+        - ➀ $\sigma$已知
+          - $UCL_{R} = \mu_{R} + 3\sigma_{R} = D_2\sigma$
+          - $CL_{R} = {\bar{R}}$
+          - $LCL_{R} = {\mu_R} - {3\sigma_R} = D_1\sigma$
+        - ➁ $\sigma$未知
+          - $UCL_{R} = D_4{\bar{R}}$
+          - $LCL_{R} = D_3{\bar{R}}$
+    - 計數值（數ㄕㄨˇ數ㄕㄨˋ）
+      - 不良數管制圖 (d)（二項分配）
+        - $E[d] = n\bar{p}$, $V[d] = n\bar{p}\bar{q}$
+        - $UCL_d = \mu_d + 3\sigma_d = n{p} + 3\sqrt{n{p}{q}}$
+        - $CL_d = \mu_d = n\bar{p}$
+        - $LCL_d = \mu_d - 3\sigma_d = n{p} - 3\sqrt{n{p}{q}}$
+      - 不良率管制圖 (p)（二項分配）
+        - $E[p] = {p}$, $V[p] = \frac{{p}{q}}{n}$
+        - $UCL_p = \mu_p + 3\sigma_p = {p} + 3\sqrt{\frac{{p}{q}}{n}}$
+        - $CL_p = \mu_p = \bar{p}$
+        - $LCL_p = \mu_p - 3\sigma_p = {p} - 3\sqrt{\frac{{p}{q}}{n}}$
+      - 缺點數管制圖 (c)（卜瓦松分配）
+        - $UCL_c = \mu_c + 3\sigma_c = c + 3\sqrt{c}$
+        - $CL_c = \mu_c = c$
+        - $LCL_c = \mu_c - 3\sigma_c = c - 3\sqrt{c}$
+  - 製程能力係數 PCI, Process Capability Index
+    - 製程中心$＝$規格中心
+      - $C_p = \frac{T}{6\sigma_p} = \frac{U-L}{6\sigma_p} = \frac{U-\bar{x}}{3\sigma_p} \text{ or } \frac{\bar{x}-L}{3\sigma_p}$
+    - 製程中心$\neq$規格中心
+      - $C_{pk}=\frac{Z_{min}}{3} = \min \left\{ \frac{USL - \bar{X}}{3\sigma}, \frac{\bar{X} - LSL}{3\sigma} \right\}$
+      - $C_{pk}$ 有可能 < 0 ? Why?
+        - YES! 因為 ${\bar{x}}$ 跑出規格外
+  - 6σ製程能力
+    - 藉由一套程序(DMAIC)精化產品品質($\sigma$變小)，使得規格界線和標準差相比。規格界線=12（標準差），在此情況下，品質近乎完美達成客戶需求。其和製程能力係數關係：
+      - 製程中心 $=$ 規格中心
+        - PCI 用 $C_p = \frac{USL-LSL}{6\sigma} = \frac{12\sigma}{6\sigma} = 2$
+        - 在此情況下，不良率＝$1.7 \times 10^{-9}$ (十億分之一)
+      - 製程中心 $\neq$ 規格中心 $(\text{飄移} \pm 1.5\sigma)$
+        - PCI 用 $C_{pk} = \frac{4.5\sigma}{3\sigma} = 1.5$
+        - 在此情況下，不良率＝$3.4 \times 10^{-6}$ (百萬分之3.4)
+    - 規格界線和產品標準差相比，達到規格界線等於12倍標準差時，即稱為6標準差的製程能力。
+      - 就像是要生產一包100克重的餅乾，+-6克重是廠商可以接受的規格範圍，製造端做出標準差為1克的製程，就稱為6標準差。
+      - 半導體製造必須達到 $6\sigma$ 的原因：因為半導體業常見的中心飄移平均為 $1.5\sigma$，若為傳統 $3\sigma$製程，就會爆掉，所以要縮小誤差才能達成高良率覆蓋率，不良率為3.4PPM。
+    - DMAIC：達成$6\sigma$的方法
+      - Define, Measure, Analysis, Improve, Control
+      - From Deming's PDCA Cycle
+  - 抽樣檢驗
+    - 單次vs雙次（一次不行才抽第二次）
+    - 調整型（進場檢驗）
+      - 表現好 ➔ 鼓勵廠商採用減量檢驗
+      - 表現不好 ➔ 逞罰廠商採用嚴格檢驗
+    - 選別型（出廠檢驗）
+      - 合格批 ➔ 允收
+      - 不合格批 ➔ 全檢 !
+        - 因為全檢所以不良率降低，但同時成本變高
+      - $AOQ\text{ 平均出廠品質} = P \times P_a$ ($P$: 不良率, $P_a$: 允收機率)（動態變化）(Average Outgoing Quality)
+      - $AOQL\text{ 平均出廠品質極限}$ 是極限結果（保證）：經過「抽樣檢驗 + 被拒收批次全檢」後，送到客戶手中的最高平均不良率上限（靜態極限值）(Average Outgoing Quality Limit)
+    - OC curve (Operating Characteristic Curve) 左上到右下ㄉ$S$曲線
+      - $AQL\text{ 允收品質水準}$ 是標準(事先約定門檻) (Acceptable Quality Limit)
+        - 縱軸：允收機率／橫軸：不良率
+        - 合格批最高不良率
+      - $LTPD\text{ 拒收品質水準}$ (Lot Tolerance Percent Defective)
+        - 不合格批最低不良率
+- 生產管理未來趨勢（流程改進）
+  - 標竿管理（追求卓越化）Benchmarking Management
+    - PDCA
+      - 內部標竿、外部競爭標竿、功能標竿、通用標竿
+  - BPR vs Kaizen
+    - BPR, 再生工程 Business Process Reengineering
+      - ➔ 假設作業流程結構錯誤
+        - 由上而下、跨部門、資訊科技
+    - Kaizen, 持續改進
+      - ➔ 假設作業流程結構正確
+        - 由下而上、單一部民、統計管制
+    - 互補：環境變化
+      - 大：BPR
+      - 小：Kaizen
+  - 服務藍圖 Service Blueprint
+    - 可見線
+  - 工具
+    - 工作研究
+      - 方法研究
+        - 程序分析
+          - 操作程序圖：○ 、 □
+          - 流程程序圖：○ 、 □ 、 ⇨ 、 ▽ 、 Ｄ
+          - 流程圖 Flow Chart：⎔ 準備、▭ 處理、◇ 決策、⬭ 終止、⭣ 路徑、$\dots$
+          - 泳道流程圖 Swimlane Flowchart
+            - 改善工作流程及交接工作
+          - Ｘ組作業程序圖、線圖
+        - Ｘ作業分析(人機配合)
+        - Ｘ動作分析(人因工程)
+      - SOP (Standard Operating Procedure)
+      - 工作衡量(效率)
+        - 標準工時
+      - 符號（ ○ 操作、 □ 檢驗、 ⇨ 搬運、 ▽ 儲存、 Ｄ 遲延）
+        - ○ 、 □ ：增加價值
+        - ⇨ 、 ▽ 、 Ｄ：沒有附加價值
+      - ECRS
+        - Eliminate, Combine, Rearrange, Simplify
+          - 減少 ⇨ 、 ▽ 、 Ｄ
+    - 一般流程
+- CALS 電腦輔助後勤支援 Computer Aided Logistic Support
+  - 核心觀念(4)：
+    - 資訊呈現無紙化
+    - 資料儲存數位化
+    - 資料交換標準化
+    - 企業資源整合化、流程合理化
+  - Logistics: SCM中物料、金錢、資訊、商務之移動
+  - CALS包括電子資料交換技術(EDI)、企業流程再造(BPR)、產品資源管理(PDM)
+  - ERP vs MRP II(MRP)最大差異
+    - 1、開放系統
+    - 2、關聯式資料庫
+    - 3、三層式主從架構
+      - 主
+      - 使用層 - > ： 主管、財務
+      - 應用層(程式)：MRP、ABC會計系統
+      - 底層 - - - > ： 資料庫
+      - 從
+    - 4、圖形化介面
+  - MRP、Closed-Loop MRP、MRP II、ERP
+    - MRP = 算料
+      - 生產規劃 PPC 之核心
+        - 輸入：MPS、BOM、IS
+        - 輸出：PO、工單
+    - closed Loop MRP = MRP + 產能檢核
+      - 加上 CRP
+    - MRP II = Closed-Loop + 財務與跨部門協調
+    - ERP
+      - MRP II + HR、業務、研發、服務等全公司流程
+- SCM 供應鏈管理 Supply Chain Management
+  - SC包含物料的前推過程(Forward process)與資訊的逆流過程(Backward process)
+  - 顧客（產品/服務）、預測、設計、製程規劃、廠址選擇、產能規劃、存貨管理、採購、供應商、後勤
+  - 供應鏈關鍵績效指標 SC's KPI
+    - 流動性 Flow
+      - 存貨周轉率 Inventory Turnover
+      - 訂單前置時間 Lead Time
+    - 可靠度 Reliability
+      - 完美訂單履行率 Perfect Order Rate
+      - 缺貨率 Stock-out Rate
+    - 現金流 Cash
+      - 現金轉換循環 Cash-to-Cash Cycle
+  - 供應鏈作業參考
+    - 1、可靠度（Reliability）
+      - (1) 準時運交（on time delivery）。
+      - (2) 訂單交貨前置期（order fulfillment lead time）。
+      - (3) 供應率（fill rate）。
+      - (4) 完整訂單的交貨（perfect order fillfullment）。
+    - 2、彈性（Flexibility）
+      - (1) 供應鏈反應時間（supply chain response time）：可用存貨速度（Inventory Velocity）說明存貨流經供應鏈的速度。
+      - (2) 外部生產彈性（upside production flexibility）。
+    - 3、成本（Expenses）
+      - (1) 供應鏈管理成本（supply chain management cost）。
+      - (2) 保證成本占收益的比率（Warranty cost as a percentage of revenue）。
+      - (3) 每一員工的附加價值（Value added per employee）。
+    - 4、資產/利用率（Assets/Utilization）
+      - (1) 供應整體庫存天數（Total inventory days of supply）。
+      - (2) 現金循環時間（Cash-to-cash cycle time）。
+      - (3) 淨資產周轉率（Net asset turns）。
+  - 長鞭效應 Whiplash effect
+    - 顧客 (小) ➔ 銷售 ➔ 零售商 ➔ 訂單 ➔ 供應商 (大)
+    - 成因 - 解決方法
+      - 需求訊號不明 Demand Signal
+        - 憑預測訂購
+          - POS, Point of Sale, 銷售點管理
+          - Sell-through data, 銷售資訊分享
+        - 每一階段均預測
+          - VMI, Vendor Managed Inventory, 供應商管理存貨
+            - 獨佔、寡占市場 (中油)
+        - 前置期太長
+          - Postponement, 延遲產品差異化 = ATO 最後才客製化
+          - Cross-docking, 越庫作業
+          - Drop shipping, 直接出貨
+      - 訂單批量 Ordering Batch
+        - Co (訂購成本)太高
+          - EDI, Electronic Data Interchange, 電子資料交換
+          - CAO, Comouter Aided Ordering, 電腦輔助訂單系統
+        - FTL無法滿載 (Fewer than Truck Load)
+          - 混合裝載 or 3rd party logistics, 第三者後勤
+      - 波動價格 Fluctuation Price
+        - High-low price
+          - EDLP (Every Day Low Price) + ABC 制度輔助
+        - 運送採購同步
+          - Blanket Order, 總括訂單
+            - 一次採購、分批取貨
+      - 短缺賽局 Shortage Game
+        - 局部理性
+          - 依過去實際銷售量分配
+        - 對供應狀況無知
+          - 分享產能與供應資訊
+        - 無限制訂貨或且退貨不需付代價
+          - 限制彈性與產能供給、退貨折讓
+  - 供應鏈策略
+    - 低成本策略
+      - 利用率越高、存貨越低越好
+      - 以最低成本大量生產
+    - 快速回應策略
+      - 產能領先具有彈性
+      - 快速生產
+    - 差異化策略
+      - 多樣化
+      - 模組設計延後產品差異化 postponement
+  - 其他小重點
+    - RFID, Radio Frequency Identification
+      - 非接觸式
+        - 短距離 ➔ 工廠自動化、貨品銷售、門禁
+        - 長距離 ➔ 收費系統、車輛身份識別、寵物注射晶片
+    - CPFR, Collaborative Planning, Forecasting and Replenishment = 協同規劃、預測與補貨
+      - Front-end Agreement, Joint Business plan, Collaboration, Execution
+      - Pros: 加值現有產品、改善市場進入機會、強化營運和技術能力、減少交易成本
+      - Cons: 失去核心能力、增加管理成本
+    - 逆向運籌 / 逆物流
+      - 考慮環保，如何透過回收過程減少物料之使用與降低成本？
+        - 1. 退貨控制
+        - 2. 產品召回控制
+        - 3. 包裝回收控制
+        - 方法：看守 (Gatekeeping) & 防止 (Avoidance)
+          - 看守：審視回流物品以防止收到不正確的物品
+          - 防止：找到能極小化物品回流數量的方法
+    - 綠色製造 ➔ 環境污染最少
+  - SCM, APS, MES, MCS之關聯 p1-138
+    - $\mathbf{SCM} \longleftrightarrow \mathbf{ERP} \longleftrightarrow \mathbf{APS} \longleftrightarrow \mathbf{MES} \longleftrightarrow \mathbf{MCS} \longleftrightarrow \mathbf{\text{設備控制器}} \longleftrightarrow \mathbf{\text{現場設備}}$
+    - APS, 先進規劃與排程系統 Advanced Planning & Scheduling
+      - 考慮客戶需求 (拉氏生產)、考慮有限產能限制，細化 ERP 粗排程，將具體派工時程交給 MES。
+    - MES, 製造執行系統 Manufacturing Executive System
+      - 負責工單派工、工時報工、在製品（WIP）追蹤與良率品質控管。
+    - MCS, 製造控制系統 Manufacturing Controlling System
+      - 負責協調多台設備的訊號通訊。
+    - 設備控制器：PLC / CNC / IPC
+      - PLC, 可程式化邏輯控制器 (Programmable Logic Controller)
+      - CNC, 電腦數值控制器 (Computer Numerical Control)
+      - IPC, 工業電腦 / 工控機 (Industrial Personal Computer)
+      - PLC 監控感測器、輸送並夾緊工件 $\longrightarrow$ CNC 接收就位訊號、精準切削加工 $\longrightarrow$ IPC 視覺瑕疵檢測並將良率回傳 MES。
+</div>
+
+<script>
+  // 等待字型完全就緒後自動執行 resize 重繪適應
+  window.addEventListener('load', () => {
+    const trigger = () => window.dispatchEvent(new Event('resize'));
+    if (document.fonts) {
+      document.fonts.ready.then(() => setTimeout(trigger, 300));
+    }
+    setTimeout(trigger, 800);
+  });
+</script>
+
+</body>
+</html>
