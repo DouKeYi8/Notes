@@ -2,10 +2,8 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=8.0, user-scalable=yes">
   <title>生產管理概論</title>
-  <!-- 引入輕量級平移縮放庫 -->
-  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -15,32 +13,48 @@
     html, body {
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      background-color: #f8f9fa;
+      background-color: #ffffff;
+      overflow: auto; /* 允許手機上下左右全向滑動 */
+      -webkit-overflow-scrolling: touch;
     }
-    #svg-object {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .svg-wrapper {
+      display: inline-block;
+      min-width: 100%;
+      padding: 20px;
+    }
+    object {
+      display: block;
+      /* 讓 SVG 依照原始尺寸完全展開，不再被螢幕寬度裁切 */
+      width: auto;
+      height: auto;
+      min-width: 1200px; /* 保證心智圖橫向有足夠展開空間 */
     }
   </style>
 </head>
 <body>
 
-  <!-- 改用 object 標籤載入，能保留完整向量向量視圖與字型 -->
-  <object id="svg-object" data="0911_SVG.svg" type="image/svg+xml"></object>
+  <div class="svg-wrapper">
+    <object id="mindmap-svg" data="0911_SVG.svg" type="image/svg+xml"></object>
+  </div>
 
   <script>
-    document.getElementById('svg-object').addEventListener('load', function() {
-      // 啟用平移與縮放控制，並自動適應螢幕完整顯示
-      svgPanZoom('#svg-object', {
-        zoomEnabled: true,
-        controlIconsEnabled: true,
-        fit: true,
-        center: true,
-        minZoom: 0.1,
-        maxZoom: 10
-      });
+    // 解決 SVG 內部 KaTeX 雙重殘影與重複字問題
+    const obj = document.getElementById('mindmap-svg');
+    obj.addEventListener('load', () => {
+      try {
+        const svgDoc = obj.contentDocument;
+        if (svgDoc) {
+          const style = svgDoc.createElementNS("http://www.w3.org/2000/svg", "style");
+          style.textContent = `
+            .katex-mathml { display: none !important; }
+            .visually-hidden { display: none !important; }
+            annotation { display: none !important; }
+          `;
+          svgDoc.documentElement.appendChild(style);
+        }
+      } catch (e) {
+        console.error("無法注入樣式", e);
+      }
     });
   </script>
 
