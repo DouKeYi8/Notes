@@ -24,21 +24,21 @@
     }
     object {
       display: block;
-      /* 讓 SVG 依照原始尺寸完全展開，不再被螢幕寬度裁切 */
       width: auto;
       height: auto;
-      min-width: 1200px; /* 保證心智圖橫向有足夠展開空間 */
+      min-width: 1400px; /* 保證心智圖在手機上有足夠寬度完全展開 */
     }
   </style>
 </head>
 <body>
 
   <div class="svg-wrapper">
+    <!-- 這裡換成你的新檔名 -->
     <object id="mindmap-svg" data="CH1_SVG.svg" type="image/svg+xml"></object>
   </div>
 
   <script>
-    // 解決 SVG 內部 KaTeX 雙重殘影與重複字問題
+    // 徹底消除 SVG 內部 KaTeX 的雙重殘影與破音字重疊
     const obj = document.getElementById('mindmap-svg');
     obj.addEventListener('load', () => {
       try {
@@ -53,7 +53,7 @@
           svgDoc.documentElement.appendChild(style);
         }
       } catch (e) {
-        console.error("無法注入樣式", e);
+        console.error("樣式注入受阻", e);
       }
     });
   </script>
