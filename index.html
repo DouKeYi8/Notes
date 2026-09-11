@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>生產管理概論</title>
+  <!-- 引入輕量級平移縮放庫 -->
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -13,33 +15,34 @@
     html, body {
       width: 100%;
       height: 100%;
+      overflow: hidden;
       background-color: #f8f9fa;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch; /* 讓 iOS 滑動更順暢 */
     }
-    .container {
-      min-width: 100%;
-      min-height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 16px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      background-color: #ffffff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border-radius: 8px;
+    #svg-object {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <img src="0911_SVG.svg" alt="生產管理概論心智圖">
-  </div>
+  <!-- 改用 object 標籤載入，能保留完整向量向量視圖與字型 -->
+  <object id="svg-object" data="0911_SVG.svg" type="image/svg+xml"></object>
+
+  <script>
+    document.getElementById('svg-object').addEventListener('load', function() {
+      // 啟用平移與縮放控制，並自動適應螢幕完整顯示
+      svgPanZoom('#svg-object', {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.1,
+        maxZoom: 10
+      });
+    });
+  </script>
 
 </body>
 </html>
